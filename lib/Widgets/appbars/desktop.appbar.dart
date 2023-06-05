@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
+import 'package:shiva_auto_service/constants/style.dart';
 
 import '../../Helpers/responsive.helper.dart';
 
@@ -17,7 +18,7 @@ class _WebBarState extends State<WebBar> {
     return PreferredSize(
       preferredSize: Size(screenSize.width, 90),
       child: Container(
-        color: Color(0xffB0AFFD),
+        color: Primary_light,
         child: Padding(
           padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Row(

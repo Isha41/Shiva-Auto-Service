@@ -5,8 +5,16 @@ import 'package:shiva_auto_service/constants/style.dart';
   leading: IconButton(icon: Icon(Icons.menu, color: Primary_light,), onPressed: (){
       key.currentState!.openDrawer();
     },),
-  title:Text("Shiva Auto Services"),
+  title:Row(
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    children: [
+      Image.asset("assets/Logo.png",height:60,width: 60,),
+      const Text("Shiva Auto Services"),
+      const SizedBox(width: 30)
+    ],
+  ),
   centerTitle: true,
-  elevation: 0,
+  elevation: 2,
   backgroundColor: Secondary_color,
 );
+
