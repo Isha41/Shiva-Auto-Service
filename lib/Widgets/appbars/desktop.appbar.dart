@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
+
+import '../../Helpers/responsive.helper.dart';
 
 class WebBar extends StatefulWidget {
   const WebBar({super.key});
@@ -14,11 +15,11 @@ class _WebBarState extends State<WebBar> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return PreferredSize(
-      preferredSize: Size(screenSize.width,90),
+      preferredSize: Size(screenSize.width, 90),
       child: Container(
         color: Color(0xffB0AFFD),
         child: Padding(
-          padding: const EdgeInsets.only(top: 20,left: 20,right: 20),
+          padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -26,13 +27,16 @@ class _WebBarState extends State<WebBar> {
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children:  [
-                    SizedBox(width: ResponsiveWidget.isLargeScreen(context) ? 300:1
+                  children: [
+                    SizedBox(
+                        width:
+                            ResponsiveWidget.isLargeScreen(context) ? 300 : 1),
+                    const Webtext(
+                      text: "Home",
                     ),
-                  const  Webtext( text: "Home",),
-                  const  Webtext(text: "Services"),
-                  const  Webtext(text: "About Us"),
-                 const   Webtext(text: "Contact Us"),
+                    const Webtext(text: "Services"),
+                    const Webtext(text: "About Us"),
+                    const Webtext(text: "Contact Us"),
                   ],
                 ),
               )
