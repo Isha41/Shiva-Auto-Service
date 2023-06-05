@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class Webtext extends StatefulWidget {
-  final text;
+  final  text;
   const Webtext({
     required this.text,
   });

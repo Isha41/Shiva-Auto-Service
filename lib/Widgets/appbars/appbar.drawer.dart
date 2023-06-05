@@ -2,23 +2,66 @@ import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
-class Open_Drawer extends StatelessWidget {
-  const Open_Drawer({super.key});
+class OpenDrawer extends StatelessWidget {
+  const OpenDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor: Primary_light,
       width: 250,
-      child:  Padding(
-        padding: const EdgeInsets.only(top:16, left: 16),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 16, left: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(""),
-                  Webtext(text: "Services"),
-                  Webtext(text: "About Us"),
-                 Webtext(text: "Contact Us"),
+          children: [
+            Expanded(
+              child: Column(
+                children: [
+                  Text(
+                    "Shiva Auto Service",
+                    style: TextStyle(
+                        fontFamily: DancingScript,
+                        fontSize: 32,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 20),
+                  Row(
+                    children: const [
+                      Icon(Icons.car_repair),
+                      SizedBox(width: 12),
+                      Webtext(text: "Services"),
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Icon(Icons.person),
+                      SizedBox(width: 12),
+                      Webtext(text: "About Us"),
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Icon(Icons.phone),
+                      SizedBox(width: 12),
+                      Webtext(text: "Contact US"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Column(
+              children: [
+                Row(
+                  children: const [
+                    Text("Copyrights "),
+                    Icon(Icons.copyright),
+                    Text(" | Shiva Auto Services"),
+                  ],
+                ),
+                const SizedBox(height: 20)
+              ],
+            ),
           ],
         ),
       ),
