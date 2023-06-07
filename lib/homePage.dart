@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? mobileAppBar(scaffoldkey)
           : PreferredSize(
-              preferredSize: Size(screenSize.width, 90), child: const WebBar()),
+              preferredSize: Size(screenSize.width, 60), child: const WebBar()),
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
       body: const Services(),

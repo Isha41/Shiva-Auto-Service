@@ -15,7 +15,7 @@ class _WebBarState extends State<WebBar> {
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;
     return PreferredSize(
-      preferredSize: Size(screenSize.width,90),
+      preferredSize: Size(screenSize.width,60),
       child: Container(
         color: Primary_light,
         child: Padding(
@@ -27,8 +27,9 @@ class _WebBarState extends State<WebBar> {
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children:  [
-                    SizedBox(width: ResponsiveWidget.isLargeScreen(context) ? 300:1
+                    SizedBox(width: ResponsiveWidget.isLargeScreen(context) ? 200:1
                     ),
                   const  Webtext( text: "Home",),
                   const  Webtext(text: "Services"),

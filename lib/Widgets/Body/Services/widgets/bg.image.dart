@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/widgets/description.text.dart';
 
 class ServicesBG extends StatelessWidget {
@@ -17,7 +18,7 @@ class ServicesBG extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: smallScreen ? screenHeight/2.5 : screenHeight,
-      width: smallScreen ? screenWidth : screenWidth / 1.7,
+      width: smallScreen ? screenWidth : ResponsiveWidget.isMediumScreen(context)? screenWidth/2:screenWidth/1.7,
       decoration: const BoxDecoration(
         image: DecorationImage(
             image: AssetImage(
