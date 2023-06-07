@@ -32,9 +32,6 @@ class _WebBarState extends State<WebBar> {
                     SizedBox(
                         width:
                             ResponsiveWidget.isLargeScreen(context) ? 300 : 1),
-                    const Webtext(
-                      text: "Home",
-                    ),
                     const Webtext(text: "Services"),
                     const Webtext(text: "About Us"),
                     const Webtext(text: "Contact Us"),

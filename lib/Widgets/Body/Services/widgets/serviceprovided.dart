@@ -1,17 +1,18 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
-class Webtext extends StatefulWidget {
+class ServiceProvided extends StatefulWidget {
   final  text;
-  const Webtext({
+  const ServiceProvided({
     required this.text,
   });
 
   @override
-  State<Webtext> createState() => _WebtextState();
+  State<ServiceProvided> createState() => _ServiceProvidedState();
 }
 
-class _WebtextState extends State<Webtext> {
+class _ServiceProvidedState extends State<ServiceProvided> {
   final List _isHovering = [
     false,
     false,
@@ -30,9 +31,9 @@ class _WebtextState extends State<Webtext> {
         mainAxisSize: MainAxisSize.min,
         children: [
           const SizedBox(
-            height: 10,
+            height: 12,
           ),
-          Text(
+          AutoSizeText(
             "${widget.text}",
             style: TextStyle(
               fontFamily: "PlayfairDisplay",
