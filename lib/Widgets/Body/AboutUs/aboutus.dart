@@ -24,11 +24,8 @@ class _AboutUsState extends State<AboutUs> {
         children: [
           Column(
             children: [
-              SizedBox(
-                height: 34,
-              ),
               Padding(
-                padding: const EdgeInsets.all(34),
+                padding: const EdgeInsets.all(24),
                 child: Container(
                   width: screenWidth * 0.64,
                   decoration: BoxDecoration(
@@ -36,7 +33,7 @@ class _AboutUsState extends State<AboutUs> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: AutoSizeText(
                       'Experience exceptional service for Maruti Suzuki and Hyundai vehicles',
                       style: TextStyle(
