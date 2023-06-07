@@ -25,33 +25,32 @@ class _CarouselTextState extends State<CarouselText> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
     return CarouselSlider(
       items: textItems
           .map((item) => Container(
                 height: 50,
                 child: Center(
                     child: AutoSizeText(
-                  "$item",
+                  item,
                   style: TextStyle(
                       color: Primary_color,
                       fontFamily: "PlayfairDisplay",
                       fontWeight: FontWeight.bold,
                       fontSize:
-                          ResponsiveWidget.isSmallScreen(context) ? 16 : 40),
+                          ResponsiveWidget.isSmallScreen(context) ? 30 : 40),
                 )),
               ))
           .toList(),
       options: CarouselOptions(
-        viewportFraction: 0.6,
-        initialPage: 1,
+        viewportFraction: 0.5,
+        initialPage: 2,
         enableInfiniteScroll: true,
-        height: screenHeight / 2.5,
+        height: screenHeight / 3,
         reverse: false,
         autoPlay: true,
-        autoPlayInterval: Duration(milliseconds: 40),
-        autoPlayAnimationDuration: Duration(milliseconds: 200),
-        autoPlayCurve: Curves.bounceInOut,
+        autoPlayInterval: const Duration(milliseconds: 30),
+        autoPlayAnimationDuration: const Duration(milliseconds: 200),
+        autoPlayCurve: Curves.fastOutSlowIn,
         enlargeCenterPage: true,
         scrollDirection: Axis.vertical,
       ),
