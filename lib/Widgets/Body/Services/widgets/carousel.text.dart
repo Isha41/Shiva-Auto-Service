@@ -29,7 +29,7 @@ class _CarouselTextState extends State<CarouselText> {
     return CarouselSlider(
       items: textItems
           .map((item) => Container(
-            height: 50,
+                height: 50,
                 child: Center(
                     child: AutoSizeText(
                   "$item",
@@ -43,11 +43,10 @@ class _CarouselTextState extends State<CarouselText> {
               ))
           .toList(),
       options: CarouselOptions(
-        
         viewportFraction: 0.6,
         initialPage: 1,
         enableInfiniteScroll: true,
-        height:screenHeight/2.5,
+        height: screenHeight / 2.5,
         reverse: false,
         autoPlay: true,
         autoPlayInterval: Duration(milliseconds: 40),

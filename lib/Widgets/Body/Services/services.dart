@@ -3,6 +3,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/widgets/bg.image.dart';
+import 'package:shiva_auto_service/Widgets/Body/Services/widgets/carousel.car.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/widgets/carousel.text.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
@@ -31,7 +32,7 @@ class _ServicesState extends State<Services> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-            Hundaies(screenHeight: screenHeight),
+              CarouselCar(),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
@@ -65,7 +66,7 @@ class _ServicesState extends State<Services> {
                             ],
                           ),
                         ),
-                      const  CarouselText()
+                        const CarouselText()
                       ],
                     ),
                   ),
@@ -79,22 +80,22 @@ class _ServicesState extends State<Services> {
   }
 }
 
-class Hundaies extends StatelessWidget {
-  const Hundaies({
-    Key? key,
-    required this.screenHeight,
-  }) : super(key: key);
+// class Hundaies extends StatelessWidget {
+//   const Hundaies({
+//     Key? key,
+//     required this.screenHeight,
+//   }) : super(key: key);
 
-  final double screenHeight;
+//   final double screenHeight;
 
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: screenHeight / 3,
-      child: Image.asset(
-        "assets/hundaicars.png",
-        fit: BoxFit.fill,
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return SizedBox(
+//       height: screenHeight / 3,
+//       child: Image.asset(
+//         "assets/hundaicars.png",
+//         fit: BoxFit.fill,
+//       ),
+//     );
+//   }
+// }

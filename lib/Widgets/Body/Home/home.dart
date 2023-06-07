@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
                   width: screenWidth / 1.5,
                   height: screenHeight / 1.5,
                   child: Image.asset(
-                    "assets/hundaicars.png",
+                    "assets/car6.png",
                   ),
                 ),
               ),
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
                   width: screenWidth / 1,
                   height: screenHeight / 1,
                   child: Image.asset(
-                    "assets/hundaicars.png",
+                    "assets/car6.png",
                   ),
                 ),
               ),
