@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/AboutUs/aboutus.dart';
+import 'package:shiva_auto_service/Widgets/Body/ContactUs/contactus.dart';
 import 'package:shiva_auto_service/Widgets/Body/Home/home.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/services.dart';
 import 'package:shiva_auto_service/Widgets/appbars/appbar.drawer.dart';
@@ -28,7 +29,7 @@ class _HomePageState extends State<HomePage> {
               preferredSize: Size(screenSize.width, 60), child: const WebBar()),
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
-      body:const  AboutUs() ,
+      body: const ContactUs(),
     );
   }
 }

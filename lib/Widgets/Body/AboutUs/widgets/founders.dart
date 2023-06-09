@@ -13,29 +13,33 @@ class Founders extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: 
-        [
+        children: [
           Padding(
-            padding:  EdgeInsets.all(16.0),
-            child: AutoSizeText("Founders",style: TextStyle(color: Colors.white,fontFamily: "PlayfairDisplay",fontSize: 32),),
+            padding: EdgeInsets.all(16.0),
+            child: AutoSizeText(
+              "Founders",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: "PlayfairDisplay",
+                  fontSize: 32),
+            ),
           ),
           Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircleAvatar(
                 backgroundColor: Primary_color,
-                maxRadius: screenWidth*0.035,
+                maxRadius: screenWidth * 0.035,
               ),
               CircleAvatar(
                 backgroundColor: Primary_color,
-                maxRadius: screenWidth*0.035,
+                maxRadius: screenWidth * 0.035,
               ),
               CircleAvatar(
                 backgroundColor: Primary_color,
-                maxRadius: screenWidth* 0.035,
+                maxRadius: screenWidth * 0.035,
               ),
             ],
           )
