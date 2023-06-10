@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class Webtext extends StatefulWidget {
-  final  text;
+  final text;
   const Webtext({
     required this.text,
   });
@@ -16,7 +16,11 @@ class _WebtextState extends State<Webtext> {
     false,
     false,
   ];
+
+  int _selectindex = 0;
+  bool _select = false;
   @override
+  
   Widget build(BuildContext context) {
     return InkWell(
       onHover: (value) {
@@ -25,7 +29,13 @@ class _WebtextState extends State<Webtext> {
         });
       },
       hoverColor: Colors.transparent,
-      onTap: () {},
+      
+      onTap: () {
+        setState(() {
+          _selectindex = 1;
+          _select = true;
+        });
+      },
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -35,11 +45,11 @@ class _WebtextState extends State<Webtext> {
           Text(
             "${widget.text}",
             style: TextStyle(
-              fontFamily: "PlayfairDisplay",
-              fontWeight: FontWeight.bold,
-              letterSpacing: 3,
-                fontSize: 16,
-                color: _isHovering[0] ? Orange : Primary_color),
+                fontFamily: "PlayfairDisplay",
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+                fontSize: 18,
+                color: _isHovering[0] ? Orange :_select? Colors.white:Primary_color),
           ),
           const SizedBox(height: 5),
           Visibility(
@@ -59,4 +69,3 @@ class _WebtextState extends State<Webtext> {
     );
   }
 }
-

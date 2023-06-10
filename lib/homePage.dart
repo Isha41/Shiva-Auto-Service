@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
               preferredSize: Size(screenSize.width, 60), child: const WebBar()),
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
-      body:const  AboutUs() ,
+      body:const  Home() ,
     );
   }
 }
