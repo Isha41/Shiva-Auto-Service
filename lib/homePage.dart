@@ -1,3 +1,4 @@
+import 'package:contained_tab_bar_view_with_custom_page_navigator/contained_tab_bar_view_with_custom_page_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/AboutUs/aboutus.dart';
@@ -5,9 +6,8 @@ import 'package:shiva_auto_service/Widgets/Body/ContactUs/contactus.dart';
 import 'package:shiva_auto_service/Widgets/Body/Home/home.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/services.dart';
 import 'package:shiva_auto_service/Widgets/appbars/appbar.drawer.dart';
-import 'package:shiva_auto_service/Widgets/appbars/desktop.appbar.dart';
 import 'package:shiva_auto_service/Widgets/appbars/mobile.appbar.dart';
-import 'package:shiva_auto_service/constants/style.dart';
+import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +15,7 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
+
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
@@ -25,11 +26,39 @@ class _HomePageState extends State<HomePage> {
       key: scaffoldkey,
       appBar: ResponsiveWidget.isSmallScreen(context)
           ? mobileAppBar(scaffoldkey)
-          : PreferredSize(
-              preferredSize: Size(screenSize.width, 60), child: const WebBar()),
+          : null,
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
-      body:const  AboutUs() ,
+      body: ContainedTabBarView(
+        tabs: [
+          SizedBox(
+              width: screenSize.width * 0.25,
+              child: Image.asset(
+                "Logo.png",
+                fit: BoxFit.fitWidth,
+              )),
+          Webtext(text: "Services", path: "/services"),
+          Webtext(text: "AboutUs", path: "/about-us"),
+          Webtext(text: "Contact", path: "/contact")
+        ],
+        onChange: (value) {
+          
+        },
+        initialIndex: 0,
+        tabBarProperties: const TabBarProperties(
+          height: 80.0,
+          indicatorColor: Colors.orange,
+          indicatorWeight: 3.0,
+          labelColor: Colors.orange,
+          unselectedLabelColor: Colors.black,
+        ),
+        views: const [
+          Home(),
+          Services(),
+          AboutUs(),
+          ContactUs(),
+        ],
+      ),
     );
   }
 }

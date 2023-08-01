@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'contactus.text.dart';
-import 'contactus.text.dart';
+import 'package:shiva_auto_service/Widgets/Body/ContactUs/widgets/contactus.text.dart';
+
 
 class DescriptionText extends StatelessWidget {
   const DescriptionText({
@@ -16,7 +16,7 @@ class DescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
+        SizedBox(
           height: screenHeight,
           width: screenWidth / 2,
           child: Column(

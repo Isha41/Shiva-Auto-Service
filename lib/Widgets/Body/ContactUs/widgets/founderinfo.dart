@@ -52,6 +52,7 @@ class FounderInfo extends StatelessWidget {
                     size: screenWidth * 0.015,
                     color: Primary_color,
                   ),
+                 const SizedBox(width: 10),
                   AutoSizeText(
                     phone,
                     style: TextStyle(
@@ -70,9 +71,13 @@ class FounderInfo extends StatelessWidget {
                     size: screenWidth * 0.015,
                     color: Primary_color,
                   ),
-                  AutoSizeText(
-                    mail,
-                    style: style,
+                 const SizedBox(width: 10),
+                  Container(
+                  constraints:BoxConstraints(maxWidth: screenWidth/3),
+                    child: AutoSizeText(
+                      mail,
+                      style: style,
+                    ),
                   )
                 ],
               ),
