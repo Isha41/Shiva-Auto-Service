@@ -3,7 +3,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 class DecorationText extends StatelessWidget {
-   DecorationText({
+   const DecorationText({
     Key? key,
     required this.smallScreen,
     required this.screenWidth,
@@ -12,7 +12,7 @@ class DecorationText extends StatelessWidget {
 
   final bool smallScreen;
   final double screenWidth;
-  var text;
+  final String text;
 
   @override
   Widget build(BuildContext context) {

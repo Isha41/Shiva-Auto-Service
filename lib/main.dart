@@ -1,24 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:shiva_auto_service/Helpers/Navigator/Navigator.dart';
-import 'package:shiva_auto_service/homePage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
+  @override
+    void initState() {
+      super.initState();
+      Flurorouter.setupRouter();
+    }
   @override
   Widget build(BuildContext context) {
-    return   MaterialApp.router(
-      title: 'Shiva Auto Services',
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routeInformationParser: AppRouter().router.routeInformationParser,
-      routerDelegate: AppRouter().router.routerDelegate,
-   );
+      initialRoute: '/',
+      onGenerateRoute: Flurorouter.router.generator,
+    );
   }
 }
 
+// now we have to initialise the router....
 
+// thats it...all things are done now i think... :)

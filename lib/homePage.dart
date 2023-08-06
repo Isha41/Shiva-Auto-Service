@@ -1,4 +1,3 @@
-import 'package:contained_tab_bar_view_with_custom_page_navigator/contained_tab_bar_view_with_custom_page_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/AboutUs/aboutus.dart';
@@ -8,20 +7,38 @@ import 'package:shiva_auto_service/Widgets/Body/Services/services.dart';
 import 'package:shiva_auto_service/Widgets/appbars/appbar.drawer.dart';
 import 'package:shiva_auto_service/Widgets/appbars/mobile.appbar.dart';
 import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
+import 'package:shiva_auto_service/constants/style.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class LandingPage extends StatefulWidget {
+  final String page;
 
+  const LandingPage({
+    Key? key,
+    required this.page,
+  }) : super(key: key);
   @override
-  State<HomePage> createState() => _HomePageState();
+  _LandingPageState createState() => _LandingPageState();
 }
 
+final GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
+List<String> pages = [
+  'home',
+  'services',
+  'about_us',
+  'contact_us',
+];
 
-class _HomePageState extends State<HomePage> {
-  final GlobalKey<ScaffoldState> scaffoldkey = GlobalKey();
+List<String> tabbottons = [
+  'Home',
+  'Services',
+  'About Us',
+  'Contact Us',
+];
+
+
+class _LandingPageState extends State<LandingPage> {
   @override
   Widget build(BuildContext context) {
-    var screenSize = MediaQuery.of(context).size;
     return Scaffold(
       key: scaffoldkey,
       appBar: ResponsiveWidget.isSmallScreen(context)
@@ -29,35 +46,100 @@ class _HomePageState extends State<HomePage> {
           : null,
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
-      body: ContainedTabBarView(
-        tabs: [
-          SizedBox(
-              width: screenSize.width * 0.25,
-              child: Image.asset(
-                "Logo.png",
-                fit: BoxFit.fitWidth,
-              )),
-          Webtext(text: "Services", path: "/services"),
-          Webtext(text: "AboutUs", path: "/about-us"),
-          Webtext(text: "Contact", path: "/contact")
-        ],
-        onChange: (value) {
-          
+      body: ResponsiveWidget.isSmallScreen(context)
+          ? Container(
+
+          )
+          : ListView(
+              children: [
+                Container(
+                  color: Colors.white,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: tabbottons.map((e) {
+                      return NavItem(
+                        selected:
+                            tabbottons.indexOf(e) == pages.indexOf(widget.page),
+                        text: e,
+                        onTap: () {
+                          if (tabbottons.indexOf(e) == 0) {
+                            Navigator.pushNamed(
+                                context, '/${pages[tabbottons.indexOf(e)]}');
+                          } else {
+                            Navigator.pushNamed(
+                                context, '/${pages[tabbottons.indexOf(e)]}');
+                          }
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ),
+                SizedBox(
+                  child: IndexedStack(
+                    index: pages.indexOf(widget.page),
+                    children: const [
+                      Home(),
+                      Services(),
+                      AboutUs(),
+                      ContactUs(),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
+}
+
+class NavItem extends StatefulWidget {
+  final String text;
+  final bool selected;
+  final Function onTap;
+
+  const NavItem(
+      {Key? key,
+      required this.selected,
+      required this.onTap,
+      required this.text})
+      : super(key: key);
+  @override
+  _NavItemState createState() => _NavItemState();
+}
+
+class _NavItemState extends State<NavItem> {
+  final List _isHovering = [
+    false,
+    false,
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.red,
+      child: InkWell(
+        onTap: () {
+          widget.onTap();
         },
-        initialIndex: 0,
-        tabBarProperties: const TabBarProperties(
-          height: 80.0,
-          indicatorColor: Colors.orange,
-          indicatorWeight: 3.0,
-          labelColor: Colors.orange,
-          unselectedLabelColor: Colors.black,
-        ),
-        views: const [
-          Home(),
-          Services(),
-          AboutUs(),
-          ContactUs(),
-        ],
+        onHover: (value) {
+          setState(() {
+            value ? _isHovering[0] = true : _isHovering[0] = false;
+          });
+        },
+        child: AnimatedContainer(
+            duration: const Duration(milliseconds: 375),
+            height: 60.0,
+            color: widget.selected ? Primary_light : Colors.white,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Center(
+                  child: Text(
+                widget.text,
+                style: TextStyle(
+                    color: _isHovering[0] ? Orange : Primary_color,
+                    fontSize: 18,
+                    fontFamily: "PlayfairDisplay",
+                    fontWeight: FontWeight.bold),
+              )),
+            )),
       ),
     );
   }
