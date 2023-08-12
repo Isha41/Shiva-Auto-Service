@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiva_auto_service/Widgets/Body/Services/widgets/Text.dart';
+import 'package:shiva_auto_service/Widgets/Body/Services/widgets/text.dart';
 
 class DescriptionText extends StatelessWidget {
   const DescriptionText({
