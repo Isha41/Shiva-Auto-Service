@@ -29,7 +29,7 @@ class FoundersInfo extends StatelessWidget {
               screenWidth: screenWidth,
               name: "Mr.Mohan Baral",
               phone: "+977 9841250071",
-              mail: "abc@gmail.com",
+              mail: "myc9803088354@gmail.com",
             ),
           ],
         ),
