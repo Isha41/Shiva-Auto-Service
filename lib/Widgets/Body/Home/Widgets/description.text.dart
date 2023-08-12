@@ -34,7 +34,7 @@ class DescriptionText extends StatelessWidget {
                   DecorationText(
                       smallScreen: smallScreen,
                       text: "Cars",
-                      color: Orange),
+                      color: orange),
                 ],
               ),
               DecorationText(

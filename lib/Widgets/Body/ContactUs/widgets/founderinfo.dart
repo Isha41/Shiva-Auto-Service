@@ -18,7 +18,7 @@ class FounderInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var style = TextStyle(
-        color: Primary_color,
+        color: primaryColor,
         fontFamily: "PlayfairDisplay",
         fontWeight: FontWeight.bold,
         fontSize: ResponsiveWidget.isSmallScreen(context)
@@ -30,7 +30,7 @@ class FounderInfo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundColor: Primary_color,
+              backgroundColor: primaryColor,
               maxRadius: screenWidth * 0.045,
             ),
           ),
@@ -50,13 +50,13 @@ class FounderInfo extends StatelessWidget {
                   Icon(
                     Icons.phone,
                     size: screenWidth * 0.015,
-                    color: Primary_color,
+                    color: primaryColor,
                   ),
-                 const SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   AutoSizeText(
                     phone,
                     style: TextStyle(
-                        color: Primary_color,
+                        color: primaryColor,
                         fontWeight: FontWeight.bold,
                         fontSize: ResponsiveWidget.isSmallScreen(context)
                             ? screenWidth * 0.013
@@ -69,11 +69,11 @@ class FounderInfo extends StatelessWidget {
                   Icon(
                     Icons.mail,
                     size: screenWidth * 0.015,
-                    color: Primary_color,
+                    color: primaryColor,
                   ),
-                 const SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Container(
-                  constraints:BoxConstraints(maxWidth: screenWidth/3),
+                    constraints: BoxConstraints(maxWidth: screenWidth / 3),
                     child: AutoSizeText(
                       mail,
                       style: style,

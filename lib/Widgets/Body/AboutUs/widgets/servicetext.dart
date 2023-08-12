@@ -19,7 +19,7 @@ class ServiceText extends StatelessWidget {
       child: Container(
         width: largescreen? screenWidth * 0.64:screenWidth,
         decoration: BoxDecoration(
-          color: Primary_light,
+          color: primaryLight,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Column(

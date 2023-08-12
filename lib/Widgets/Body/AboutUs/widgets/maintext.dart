@@ -23,7 +23,7 @@ class MainText extends StatelessWidget {
         width: lagreScreen? screenWidth * 0.64 : screenWidth,
         height: screenHeight * 0.65,
         decoration: BoxDecoration(
-          color: Primary_light,
+          color: primaryLight,
           borderRadius: BorderRadius.circular(15),
         ),
         child: const Padding(
