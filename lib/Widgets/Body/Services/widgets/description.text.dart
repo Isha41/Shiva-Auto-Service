@@ -17,15 +17,24 @@ class DescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Container(
-                height: smallScreen ? screenHeight/2 : screenHeight,
-    width: smallScreen ? screenWidth : screenWidth / 2,
+        SizedBox(
+          height: smallScreen ? screenHeight / 2 : screenHeight,
+          width: smallScreen ? screenWidth : screenWidth / 2,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              DecorationText(smallScreen: smallScreen, screenWidth: screenWidth,text: "Expert Maintenance and Repairs"),
-              DecorationText(smallScreen: smallScreen, screenWidth: screenWidth, text: "Ready to Serve You with Expertise and Dedication"),
-              DecorationText(smallScreen: smallScreen, screenWidth: screenWidth, text: "Serving You Since 15 years"),
+              DecorationText(
+                  smallScreen: smallScreen,
+                  screenWidth: screenWidth,
+                  text: "Expert Maintenance and Repairs"),
+              DecorationText(
+                  smallScreen: smallScreen,
+                  screenWidth: screenWidth,
+                  text: "Ready to Serve You with Expertise and Dedication"),
+              DecorationText(
+                  smallScreen: smallScreen,
+                  screenWidth: screenWidth,
+                  text: "Serving You Since 15 years"),
             ],
           ),
         )

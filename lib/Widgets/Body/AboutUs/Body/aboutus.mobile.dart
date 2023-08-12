@@ -21,11 +21,8 @@ class AboutUSMobile extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           ServiceText(screenWidth: screenWidth),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 34, left: 34, right: 34),
-            child: MainText(
-                screenWidth: screenWidth, screenHeight: screenHeight),
-          ),
+          MainText(
+              screenWidth: screenWidth, screenHeight: screenHeight),
           ServicesList(
               screenWidth: screenWidth, screenHeight: screenHeight),
           Founders(screenWidth: screenWidth),

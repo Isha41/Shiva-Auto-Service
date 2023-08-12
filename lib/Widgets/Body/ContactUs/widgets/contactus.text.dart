@@ -23,7 +23,7 @@ class DecorationText extends StatelessWidget {
           "$text",
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              color: Primary_color,
+              color: primaryColor,
               fontSize: ResponsiveWidget.isSmallScreen(context)
                   ? screenWidth * 0.045
                   : screenWidth * 0.045),

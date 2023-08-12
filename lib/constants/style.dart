@@ -1,11 +1,9 @@
 import 'package:flutter/animation.dart';
 
-var Primary_color = const Color(0xff0A086A);
-var Secondary_color = const Color(0xff7371E5);
-var Primary_light = const Color(0xffB0AFFD);
-var Orange = const Color(0xffF25F0C);
+var primaryColor = const Color(0xff0A086A);
+var secondaryColor = const Color(0xff7371E5);
+var primaryLight = const Color(0xffB0AFFD);
+var orange = const Color(0xffF25F0C);
 
- var PlayfairDisplay = "PlayfairDisplay";
-var DancingScript = "DancingScript";
-
-
+var playfairDisplay = "PlayfairDisplay";
+var dancingScript = "DancingScript";

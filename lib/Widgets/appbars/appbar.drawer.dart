@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:shiva_auto_service/Widgets/Body/Home/home.dart';
 import 'package:shiva_auto_service/Widgets/appbars/webbar.text.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
@@ -9,7 +8,7 @@ class OpenDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Primary_light,
+      backgroundColor: primaryLight,
       width: 250,
       child: Padding(
         padding: const EdgeInsets.only(top: 16, left: 16),
@@ -22,20 +21,27 @@ class OpenDrawer extends StatelessWidget {
                   Text(
                     "Shiva Auto Service",
                     style: TextStyle(
-                        fontFamily: DancingScript,
+                        fontFamily: dancingScript,
                         fontSize: 32,
                         fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 20),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Row(
-                      children: const [
-                        Icon(Icons.car_repair),
-                        SizedBox(width: 12),
-                        Webtext(text: "Services", route: "services"),
-                      ],
-                    ),
+                  Row(
+                    children: const [
+                      Icon(Icons.home),
+                      SizedBox(width: 12),
+                      Webtext(
+                        text: "Home",
+                        route: "home",
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: const [
+                      Icon(Icons.car_repair),
+                      SizedBox(width: 12),
+                      Webtext(text: "Services", route: "services"),
+                    ],
                   ),
                   Row(
                     children: const [

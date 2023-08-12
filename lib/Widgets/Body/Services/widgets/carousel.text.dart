@@ -33,7 +33,7 @@ class _CarouselTextState extends State<CarouselText> {
                     child: AutoSizeText(
                   item,
                   style: TextStyle(
-                      color: Primary_color,
+                      color: primaryColor,
                       fontFamily: "PlayfairDisplay",
                       fontWeight: FontWeight.bold,
                       fontSize:

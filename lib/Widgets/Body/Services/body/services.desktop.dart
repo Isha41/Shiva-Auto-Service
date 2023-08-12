@@ -27,52 +27,37 @@ class ScreensDesktop extends StatelessWidget {
           screenHeight: screenHeight,
           screenWidth: screenWidth,
         ),
-        // Expanded(
-        //   child: ListView(
-        //     children: [
-        //       const CarouselCar(),
-        //       Expanded(
-        //         child: Padding(
-        //           padding: const EdgeInsets.all(16.0),
-        //           child: Container(
-        //             decoration: const BoxDecoration(
-        //               color: Color(0xffD9D9D9),
-        //               borderRadius: BorderRadius.all(Radius.circular(15.0)),
-        //             ),
-        //             child: Column(
-        //               children: [
-        //                 const SizedBox(height: 10),
-        //                 Container(
-        //                   width: screenWidth * 0.3,
-        //                   decoration: BoxDecoration(
-        //                     color: Primary_light,
-        //                     borderRadius: BorderRadius.circular(15),
-        //                   ),
-        //                   child: Column(
-        //                     children: const [
-        //                       Padding(
-        //                         padding: EdgeInsets.all(8.0),
-        //                         child: AutoSizeText(
-        //                           "Services  Provided",
-        //                           style: TextStyle(
-        //                               fontSize: 32,
-        //                               fontFamily: "PlayfairDisplay",
-        //                               fontWeight: FontWeight.w800),
-        //                           maxLines: 1,
-        //                         ),
-        //                       ),
-        //                     ],
-        //                   ),
-        //                 ),
-        //                 const CarouselText()
-        //               ],
-        //             ),
-        //           ),
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
+        Column(
+          children: [
+            SizedBox(
+              height: screenHeight / 3,
+              child: const CarouselCar(),
+            ),
+            Container(
+                    width: screenWidth * 0.3,
+                    decoration: BoxDecoration(
+                      color: primaryLight,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: AutoSizeText(
+                        "Services  Provided",
+                        style: TextStyle(
+                            fontSize: 32,
+                            fontFamily: "PlayfairDisplay",
+                            fontWeight: FontWeight.w800),
+                        maxLines: 1,
+                      ),
+                    ),
+                  ),
+            SizedBox(
+              height: screenHeight / 3,
+              width: screenWidth / 2.5,
+              child: const CarouselText(),
+            )
+          ],
+        ),
       ],
     );
   }

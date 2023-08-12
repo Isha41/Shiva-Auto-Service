@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:shiva_auto_service/Widgets/Body/Home/home.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class Webtext extends StatefulWidget {
@@ -23,12 +21,7 @@ class _WebtextState extends State<Webtext> {
     false,
   ];
 
-  bool _select = false;
   @override
-  void initState() {
-    super.initState();
-  }
-
   Widget build(BuildContext context) {
     return InkWell(
       onHover: (value) {
@@ -53,7 +46,7 @@ class _WebtextState extends State<Webtext> {
                 fontWeight: FontWeight.bold,
                 letterSpacing: 3,
                 fontSize: 18,
-                color: _isHovering[0] ? Orange : Primary_color),
+                color: _isHovering[0] ? orange : primaryColor),
           ),
           const SizedBox(height: 5),
           Visibility(
@@ -63,7 +56,7 @@ class _WebtextState extends State<Webtext> {
             visible: _isHovering[0],
             child: Container(
               decoration: BoxDecoration(
-                  color: Orange, borderRadius: BorderRadius.circular(20)),
+                  color: orange, borderRadius: BorderRadius.circular(20)),
               height: 3,
               width: 20,
             ),

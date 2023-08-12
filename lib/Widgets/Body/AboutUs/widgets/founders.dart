@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class Founders extends StatelessWidget {
@@ -16,7 +17,7 @@ class Founders extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
+         const Padding(
             padding: EdgeInsets.all(16.0),
             child: AutoSizeText(
               "Founders",
@@ -30,16 +31,16 @@ class Founders extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               CircleAvatar(
-                backgroundColor: Primary_color,
-                maxRadius: screenWidth * 0.035,
+                backgroundColor: primaryColor,
+                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
               ),
               CircleAvatar(
-                backgroundColor: Primary_color,
-                maxRadius: screenWidth * 0.035,
+                backgroundColor: primaryColor,
+                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
               ),
               CircleAvatar(
-                backgroundColor: Primary_color,
-                maxRadius: screenWidth * 0.035,
+                backgroundColor: primaryColor,
+                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
               ),
             ],
           )

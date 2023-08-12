@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/widgets/bg.image.dart';
+import 'package:shiva_auto_service/Widgets/Body/Services/widgets/carousel.car.dart';
 import 'package:shiva_auto_service/Widgets/Body/Services/widgets/carousel.text.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
@@ -40,7 +41,7 @@ class ScreenMobile extends StatelessWidget {
                   Container(
                     width: screenWidth * 0.3,
                     decoration: BoxDecoration(
-                      color: Primary_light,
+                      color: primaryLight,
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: const Padding(
@@ -58,6 +59,11 @@ class ScreenMobile extends StatelessWidget {
                   SizedBox(
                     width: screenWidth,
                     child: const CarouselText(),
+                  ),
+                  SizedBox(
+                    width: screenWidth,
+                    height: screenHeight,
+                    child: const CarouselCar(),
                   )
                 ],
               ),

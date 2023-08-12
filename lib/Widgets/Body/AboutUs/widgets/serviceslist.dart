@@ -22,81 +22,84 @@ class ServicesList extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Container(
-        width: lagreScreen? screenWidth * 0.27 : screenWidth,
+        width: lagreScreen ? screenWidth * 0.27 : screenWidth,
         height: screenHeight * 0.52,
         decoration: BoxDecoration(
-          color: Primary_light,
+          color: primaryLight,
           borderRadius: BorderRadius.circular(15),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const AutoSizeText(
-              "Services We Offer:",
-              style: TextStyle(
-                  fontSize: 30,
-                  fontFamily: "PlayfairDisplay",
-                  fontWeight: FontWeight.w800),
-              maxLines: 1,
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Full Service",
-                style: style,
+        child: Padding(
+          padding: const EdgeInsets.only(left: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const AutoSizeText(
+                "Services We Offer:",
+                style: TextStyle(
+                    fontSize: 30,
+                    fontFamily: "PlayfairDisplay",
+                    fontWeight: FontWeight.w800),
                 maxLines: 1,
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Engine Overhaulingg",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Full Service",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Transmission",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Engine Overhaulingg",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "AC Cooling System",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Transmission",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Full Service",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "AC Cooling System",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Electrical Dent-Paint",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Full Service",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-            SizedBox(
-              width:lagreScreen? screenWidth * .25:screenWidth,
-              child: AutoSizeText(
-                "Accidental Repair",
-                style: style,
-                maxLines: 1,
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Electrical Dent-Paint",
+                  style: style,
+                  maxLines: 1,
+                ),
               ),
-            ),
-          ],
+              SizedBox(
+                width: lagreScreen ? screenWidth * .25 : screenWidth,
+                child: AutoSizeText(
+                  "Accidental Repair",
+                  style: style,
+                  maxLines: 1,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
