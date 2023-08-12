@@ -13,11 +13,18 @@ class Founders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var style = TextStyle(
+        color: Colors.white,
+        fontFamily: "PlayfairDisplay",
+        fontWeight: FontWeight.bold,
+        fontSize: ResponsiveWidget.isSmallScreen(context)
+            ? screenWidth * 0.015
+            : screenWidth * 0.015);
     return SizedBox(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-         const Padding(
+          const Padding(
             padding: EdgeInsets.all(16.0),
             child: AutoSizeText(
               "Founders",
@@ -30,18 +37,38 @@ class Founders extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CircleAvatar(
-                backgroundColor: primaryColor,
-                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
+              Column(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/mohan.jpg"),
+                    maxRadius: ResponsiveWidget.isLargeScreen(context)
+                        ? 0.035 * screenWidth
+                        : 50,
+                  ),
+                  AutoSizeText(
+                    "Mr.Mohan Baral",
+                    style: style,
+                  ),
+                ],
               ),
-              CircleAvatar(
-                backgroundColor: primaryColor,
-                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
+              Column(
+                children: [
+                  CircleAvatar(
+                    backgroundImage: AssetImage("assets/bishnu.jpg"),
+                    maxRadius: ResponsiveWidget.isLargeScreen(context)
+                        ? 0.035 * screenWidth
+                        : 50,
+                  ),
+                  AutoSizeText(
+                    "Mr.Bishnu Raya",
+                    style: style,
+                  ),
+                ],
               ),
-              CircleAvatar(
-                backgroundColor: primaryColor,
-                maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
-              ),
+              // CircleAvatar(
+              //   backgroundColor: primaryColor,
+              //   maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
+              // ),
             ],
           )
         ],

@@ -10,10 +10,11 @@ class FounderInfo extends StatelessWidget {
     required this.name,
     required this.phone,
     required this.mail,
+    required this.photo,
   }) : super(key: key);
 
   final double screenWidth;
-  final String name, phone, mail;
+  final String name, phone, mail, photo;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +31,7 @@ class FounderInfo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: CircleAvatar(
-              backgroundColor: primaryColor,
+              backgroundImage: AssetImage(this.photo),
               maxRadius: screenWidth * 0.045,
             ),
           ),
