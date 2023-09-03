@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/Home/Widgets/background.image.dart';
 
+import '../ContactUs/widgets/location.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -41,7 +43,13 @@ class _HomeState extends State<Home> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding:  EdgeInsets.only(left: 16, bottom: ResponsiveWidget.isSmallScreen(context)?0:ResponsiveWidget.isMediumScreen(context)?100:60),
+              padding: EdgeInsets.only(
+                  left: 16,
+                  bottom: ResponsiveWidget.isSmallScreen(context)
+                      ? 0
+                      : ResponsiveWidget.isMediumScreen(context)
+                          ? 100
+                          : 60),
               child: SizedBox(
                 width: smallScreen ? screenWidth : screenWidth / 3,
                 height: screenHeight / 3,

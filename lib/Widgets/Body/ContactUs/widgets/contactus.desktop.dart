@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shiva_auto_service/Widgets/Body/ContactUs/widgets/location.dart';
 import 'founderinfo.dart';
 import 'contactus.description.dart';
 
@@ -17,8 +18,14 @@ class ContactUsDesktop extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        DescriptionText(screenHeight: screenHeight, screenWidth: screenWidth),
-        SizedBox(width: screenWidth*0.12),
+        Column(
+          children: [
+            DescriptionText(
+                screenHeight: screenHeight, screenWidth: screenWidth),
+            Address(),
+          ],
+        ),
+        SizedBox(width: screenWidth * 0.12),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,

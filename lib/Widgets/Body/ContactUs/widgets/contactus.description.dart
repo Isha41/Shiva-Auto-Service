@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Widgets/Body/ContactUs/widgets/contactus.text.dart';
 
-
 class DescriptionText extends StatelessWidget {
   const DescriptionText({
     Key? key,
@@ -19,13 +18,13 @@ class DescriptionText extends StatelessWidget {
       children: [
         DecorationText(
             screenWidth: screenWidth,
-            text: "We're here for you, Always ready to help"),
+            text: "We're here for you, Always ready to help."),
+        // DecorationText(
+        //     screenWidth: screenWidth,
+        //     text:
+        //         "Put your NEEDS in our hands & See MIND BLOWING RESULTS"),
         DecorationText(
-            screenWidth: screenWidth,
-            text:
-                "Put your NEEDS in our hands & See MIND BLOWING RESULTS"),
-        DecorationText(
-            screenWidth: screenWidth, text: "Let's CONNECT & UNITE"),
+            screenWidth: screenWidth, text: "Let's CONNECT & UNITE."),
       ],
     );
   }
