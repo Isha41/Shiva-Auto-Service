@@ -44,7 +44,8 @@ class _HomeState extends State<Home> {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: EdgeInsets.only(
-                  left: 16,
+                  left: 15,
+                  right: 15,
                   bottom: ResponsiveWidget.isSmallScreen(context)
                       ? 0.5
                       : ResponsiveWidget.isMediumScreen(context)
@@ -62,6 +63,9 @@ class _HomeState extends State<Home> {
                         fontFamily: "DancingScript",
                         fontSize: 32,
                       ),
+                    ),
+                    SizedBox(
+                      height: smallScreen ? screenHeight / 50 : 0,
                     ),
                     Address(
                       x: 0.0001,

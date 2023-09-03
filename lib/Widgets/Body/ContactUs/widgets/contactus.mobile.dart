@@ -21,6 +21,9 @@ class ContactUsMobile extends StatelessWidget {
           screenHeight: screenHeight,
           screenWidth: screenWidth,
         ),
+        SizedBox(
+          height: screenHeight / 37,
+        ),
         FounderInfo(
           screenWidth: screenWidth,
           name: "Shiva Auto Service",
@@ -41,13 +44,13 @@ class ContactUsMobile extends StatelessWidget {
               screenWidth: screenWidth,
               name: "Mr.Bishnu Raya",
               phone: "+977 9841274678",
-              mail: "abc@gmail.com",
+              mail: "...",
               photo: "assets/bishnu.jpg",
             ),
           ],
         ),
         Address(
-          x: 1.0,
+          x: 0.028,
           y: 30.0,
         )
       ],
