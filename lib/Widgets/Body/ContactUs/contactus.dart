@@ -18,10 +18,11 @@ class _ContactUsState extends State<ContactUs> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(
-              "assets/Bg7.png",
-            ),
-            fit: BoxFit.fill),
+          image: AssetImage(
+            "assets/Bg7.png",
+          ),
+          fit: BoxFit.fill,
+        ),
       ),
       height: screenHeight,
       width: screenWidth,

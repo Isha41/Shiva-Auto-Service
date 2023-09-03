@@ -45,21 +45,23 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       key: scaffoldkey,
       appBar: ResponsiveWidget.isSmallScreen(context)
-          ? mobileAppBar(scaffoldkey,context)
+          ? mobileAppBar(scaffoldkey, context)
           : null,
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
       body: ResponsiveWidget.isSmallScreen(context)
           ? SizedBox(
-              child: IndexedStack(
-                index: pages.indexOf(widget.page),
-                children: const [
-                  Home(),
-                  Services(),
-                  AboutUs(),
-                  ContactUs(),
-                ],
-              ),
+              child: ListView(children: [
+                IndexedStack(
+                  index: pages.indexOf(widget.page),
+                  children: const [
+                    Home(),
+                    Services(),
+                    AboutUs(),
+                    ContactUs(),
+                  ],
+                ),
+              ]),
             )
           : ListView(
               children: [

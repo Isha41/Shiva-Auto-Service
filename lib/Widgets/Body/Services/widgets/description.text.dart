@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shiva_auto_service/Widgets/Body/Services/widgets/Text.dart';
+import 'package:shiva_auto_service/Widgets/Body/Services/widgets/text.dart';
 
 class DescriptionText extends StatelessWidget {
   const DescriptionText({
@@ -24,20 +24,23 @@ class DescriptionText extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               DecorationText(
-                  smallScreen: smallScreen,
-                  screenWidth: screenWidth,
-                  text: "Expert Maintenance and Repairs"),
+                smallScreen: smallScreen,
+                screenWidth: screenWidth,
+                text: "Expert Maintenance and Repairs",
+              ),
               DecorationText(
-                  smallScreen: smallScreen,
-                  screenWidth: screenWidth,
-                  text: "Ready to Serve You with Expertise and Dedication"),
+                smallScreen: smallScreen,
+                screenWidth: screenWidth,
+                text: "Ready to Serve You with Expertise and Dedication",
+              ),
               DecorationText(
-                  smallScreen: smallScreen,
-                  screenWidth: screenWidth,
-                  text: "Serving You Since 15 years"),
+                smallScreen: smallScreen,
+                screenWidth: screenWidth,
+                text: "Serving You Since 15 years",
+              ),
             ],
           ),
-        )
+        ),
       ],
     );
   }

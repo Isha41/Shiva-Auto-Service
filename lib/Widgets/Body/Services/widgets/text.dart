@@ -17,16 +17,17 @@ class DecorationText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 16,left: 16),
+      padding: const EdgeInsets.only(top: 16, left: 16),
       child: SizedBox(
         width: smallScreen ? screenWidth : screenWidth / 2.5,
         child: AutoSizeText(
           text,
           style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              fontSize: smallScreen ? 24 : 45),
-              maxLines: 2,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontSize: smallScreen ? 24 : 45,
+          ),
+          maxLines: 2,
         ),
       ),
     );

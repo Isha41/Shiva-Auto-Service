@@ -27,7 +27,7 @@ class _CarouselTextState extends State<CarouselText> {
     double screenHeight = MediaQuery.of(context).size.height;
     return CarouselSlider(
       items: textItems
-          .map((item) => Container(
+          .map((item) => SizedBox(
                 height: 50,
                 child: Center(
                     child: AutoSizeText(

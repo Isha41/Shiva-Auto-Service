@@ -14,26 +14,18 @@ class DescriptionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        SizedBox(
-          height: screenHeight,
-          width: screenWidth / 2,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              DecorationText(
-                  screenWidth: screenWidth,
-                  text: "We're here for you, Always ready to help"),
-              DecorationText(
-                  screenWidth: screenWidth,
-                  text:
-                      "Put your NEEDS in our hands & See MIND BLOWING RESULTS"),
-              DecorationText(
-                  screenWidth: screenWidth, text: "Let's CONNECT & UNITE"),
-            ],
-          ),
-        )
+        DecorationText(
+            screenWidth: screenWidth,
+            text: "We're here for you, Always ready to help"),
+        DecorationText(
+            screenWidth: screenWidth,
+            text:
+                "Put your NEEDS in our hands & See MIND BLOWING RESULTS"),
+        DecorationText(
+            screenWidth: screenWidth, text: "Let's CONNECT & UNITE"),
       ],
     );
   }
