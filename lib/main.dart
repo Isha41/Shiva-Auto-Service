@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/Navigator/routers.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  runApp(MyApp());
+  setPathUrlStrategy();
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  MyAppState createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   @override
     void initState() {
       super.initState();
@@ -25,7 +29,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-// now we have to initialise the router....
-
-// thats it...all things are done now i think... :)

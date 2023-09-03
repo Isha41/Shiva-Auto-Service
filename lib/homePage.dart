@@ -51,17 +51,15 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: const Color(0xffBFBFCF),
       body: ResponsiveWidget.isSmallScreen(context)
           ? SizedBox(
-              child: ListView(children: [
-                IndexedStack(
-                  index: pages.indexOf(widget.page),
-                  children: const [
-                    Home(),
-                    Services(),
-                    AboutUs(),
-                    ContactUs(),
-                  ],
-                ),
-              ]),
+              child: IndexedStack(
+                index: pages.indexOf(widget.page),
+                children: const [
+                  Home(),
+                  Services(),
+                  AboutUs(),
+                  ContactUs(),
+                ],
+              ),
             )
           : ListView(
               children: [

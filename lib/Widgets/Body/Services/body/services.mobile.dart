@@ -45,11 +45,11 @@ class ScreenMobile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(15),
                     ),
                     child: const Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.all(16.0),
                       child: AutoSizeText(
                         "Services  Provided",
                         style: TextStyle(
-                            fontSize: 32,
+                            fontSize: 40,
                             fontFamily: "PlayfairDisplay",
                             fontWeight: FontWeight.w800),
                         maxLines: 1,
@@ -60,15 +60,15 @@ class ScreenMobile extends StatelessWidget {
                     width: screenWidth,
                     child: const CarouselText(),
                   ),
-                  SizedBox(
-                    width: screenWidth,
-                    height: screenHeight,
-                    child: const CarouselCar(),
-                  )
                 ],
               ),
             ),
           ),
+          const SizedBox(height: 30),
+          SizedBox(
+            width: screenWidth,
+            child: const CarouselCar(),
+          )
         ],
       ),
     );

@@ -61,8 +61,8 @@ class _HomeState extends State<Home> {
             child: Align(
               alignment: Alignment.bottomRight,
               child: SizedBox(
-                width: screenWidth / 1,
-                height: screenHeight / 1,
+                width: screenWidth,
+                height: screenHeight ,
                 child: Image.asset(
                   "assets/car6.png",
                 ),
