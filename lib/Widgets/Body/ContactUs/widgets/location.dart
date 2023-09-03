@@ -26,13 +26,13 @@ class _AddressState extends State<Address> {
         color: Colors.white24,
         width: ResponsiveWidget.isSmallScreen(context)
             ? screenWidth
-            : screenWidth / 2.5,
+            : screenWidth / 2.3,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
               AutoSizeText(
-                "Location",
+                "Location :",
                 style: style,
               ),
               AutoSizeText(
