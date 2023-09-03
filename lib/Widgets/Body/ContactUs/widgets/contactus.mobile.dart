@@ -46,7 +46,10 @@ class ContactUsMobile extends StatelessWidget {
             ),
           ],
         ),
-        Address()
+        Address(
+          x: 1.0,
+          y: 30.0,
+        )
       ],
     );
   }

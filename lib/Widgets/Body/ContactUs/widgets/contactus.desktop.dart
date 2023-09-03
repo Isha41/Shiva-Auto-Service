@@ -22,7 +22,10 @@ class ContactUsDesktop extends StatelessWidget {
           children: [
             DescriptionText(
                 screenHeight: screenHeight, screenWidth: screenWidth),
-            Address(),
+            Address(
+              x: 0.028,
+              y: 30.0,
+            ),
           ],
         ),
         SizedBox(width: screenWidth * 0.12),

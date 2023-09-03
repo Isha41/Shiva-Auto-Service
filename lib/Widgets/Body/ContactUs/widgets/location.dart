@@ -4,7 +4,11 @@ import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class Address extends StatefulWidget {
-  const Address({super.key});
+  const Address({super.key, required this.x, required this.y});
+
+  final double x;
+
+  final double y;
 
   @override
   State<Address> createState() => _AddressState();
@@ -18,10 +22,10 @@ class _AddressState extends State<Address> {
       color: primaryColor,
       fontFamily: "PlayfairDisplay",
       fontWeight: FontWeight.bold,
-      fontSize: screenWidth * 0.028,
+      fontSize: screenWidth * widget.x,
     );
     return Padding(
-      padding: const EdgeInsets.all(30.0),
+      padding: EdgeInsets.all(widget.y),
       child: Container(
         color: Colors.white24,
         width: ResponsiveWidget.isSmallScreen(context)
