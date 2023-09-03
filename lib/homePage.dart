@@ -64,27 +64,53 @@ class _HomePageState extends State<HomePage> {
           : ListView(
               children: [
                 Container(
+                  height: 60,
                   color: Colors.white,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: tabbottons.map(
-                      (e) {
-                        return NavItem(
-                          selected: tabbottons.indexOf(e) ==
-                              pages.indexOf(widget.page),
-                          text: e,
-                          onTap: () {
-                            if (tabbottons.indexOf(e) == 0) {
-                              Navigator.pushNamed(
-                                  context, '/${pages[tabbottons.indexOf(e)]}');
-                            } else {
-                              Navigator.pushNamed(
-                                  context, '/${pages[tabbottons.indexOf(e)]}');
-                            }
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        width: MediaQuery.of(context).size.width / 2,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              Colors.black87,
+                              Colors.white,
+                            ],
+                            begin: FractionalOffset.center,
+                            end: FractionalOffset.topRight,
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              "assets/Logo1.png",
+                              fit: BoxFit.contain,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Row(
+                        children: tabbottons.map(
+                          (e) {
+                            return NavItem(
+                              selected: tabbottons.indexOf(e) ==
+                                  pages.indexOf(widget.page),
+                              text: e,
+                              onTap: () {
+                                if (tabbottons.indexOf(e) == 0) {
+                                  Navigator.pushNamed(context,
+                                      '/${pages[tabbottons.indexOf(e)]}');
+                                } else {
+                                  Navigator.pushNamed(context,
+                                      '/${pages[tabbottons.indexOf(e)]}');
+                                }
+                              },
+                            );
                           },
-                        );
-                      },
-                    ).toList(),
+                        ).toList(),
+                      ),
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -127,7 +153,6 @@ class _NavItemState extends State<NavItem> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.red,
       child: InkWell(
         onTap: () {
           widget.onTap();

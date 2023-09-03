@@ -1,20 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:shiva_auto_service/constants/style.dart';
 
 mobileAppBar(GlobalKey<ScaffoldState> key, context) => AppBar(
-  title: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      SizedBox(
-        width:  MediaQuery.of(context).size.width/1.5,
-
+      title: Container(
+        color: Colors.black87,
+        width: MediaQuery.of(context).size.width,
         child: Image.asset(
           "assets/Logo1.png",
           fit: BoxFit.fill,
         ),
       ),
-    ],
-  ),
-  centerTitle: true,
-  backgroundColor: secondaryColor,
-);
+      backgroundColor: Colors.black87,
+      // centerTitle: true,
+    );
