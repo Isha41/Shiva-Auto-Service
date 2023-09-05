@@ -21,7 +21,6 @@ class _CarouselCarState extends State<CarouselCar> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
 
     return  SizedBox(
       height: screenHeight / 2.5,
@@ -31,6 +30,7 @@ class _CarouselCarState extends State<CarouselCar> {
           enableInfiniteScroll: true,
           autoPlay: true,
           reverse: false,
+          pauseAutoPlayOnTouch: true,
           autoPlayInterval: const Duration(seconds: 1),
           autoPlayAnimationDuration: const Duration(milliseconds: 800),
           autoPlayCurve: Curves.fastOutSlowIn,

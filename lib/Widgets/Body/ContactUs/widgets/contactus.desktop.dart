@@ -16,23 +16,22 @@ class ContactUsDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Column(
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             DescriptionText(
                 screenHeight: screenHeight, screenWidth: screenWidth),
             SizedBox(
               height: screenHeight / 12,
             ),
-            Address(
+            const Address(
               x: 0.018,
               y: 30.0,
             ),
           ],
         ),
-        SizedBox(width: screenWidth * 0.12),
         Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.start,

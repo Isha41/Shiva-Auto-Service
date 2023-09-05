@@ -10,5 +10,5 @@ mobileAppBar(GlobalKey<ScaffoldState> key, context) => AppBar(
         ),
       ),
       backgroundColor: Colors.black87,
-      // centerTitle: true,
+      centerTitle: true,
     );

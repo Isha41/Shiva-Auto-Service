@@ -1,7 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
-import 'package:shiva_auto_service/constants/style.dart';
 
 class Founders extends StatelessWidget {
   const Founders({
@@ -40,7 +39,7 @@ class Founders extends StatelessWidget {
               Column(
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage("assets/mohan.jpg"),
+                    backgroundImage:const AssetImage("assets/mohan.jpg"),
                     maxRadius: ResponsiveWidget.isLargeScreen(context)
                         ? 0.035 * screenWidth
                         : 50,
@@ -54,7 +53,7 @@ class Founders extends StatelessWidget {
               Column(
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage("assets/bishnu.jpg"),
+                    backgroundImage: const AssetImage("assets/bishnu.jpg"),
                     maxRadius: ResponsiveWidget.isLargeScreen(context)
                         ? 0.035 * screenWidth
                         : 50,
@@ -65,10 +64,6 @@ class Founders extends StatelessWidget {
                   ),
                 ],
               ),
-              // CircleAvatar(
-              //   backgroundColor: primaryColor,
-              //   maxRadius: ResponsiveWidget.isLargeScreen(context)?0.035*screenWidth:50,
-              // ),
             ],
           )
         ],

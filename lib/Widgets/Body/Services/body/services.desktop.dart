@@ -30,7 +30,7 @@ class ScreensDesktop extends StatelessWidget {
         Column(
           children: [
             SizedBox(
-              height: screenHeight / 3,
+              height: screenHeight/3,
               child: const CarouselCar(),
             ),
             Container(

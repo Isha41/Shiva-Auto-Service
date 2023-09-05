@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 

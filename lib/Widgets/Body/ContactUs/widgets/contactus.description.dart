@@ -19,10 +19,6 @@ class DescriptionText extends StatelessWidget {
         DecorationText(
             screenWidth: screenWidth,
             text: "We're here for you, Always ready to help."),
-        // DecorationText(
-        //     screenWidth: screenWidth,
-        //     text:
-        //         "Put your NEEDS in our hands & See MIND BLOWING RESULTS"),
         DecorationText(
             screenWidth: screenWidth, text: "Let's CONNECT & UNITE."),
       ],

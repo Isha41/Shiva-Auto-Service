@@ -48,6 +48,7 @@ class _CarouselTextState extends State<CarouselText> {
         height: screenHeight / 3,
         reverse: false,
         autoPlay: true,
+        pauseAutoPlayOnTouch: true,
         autoPlayInterval: const Duration(milliseconds: 30),
         autoPlayAnimationDuration: const Duration(milliseconds: 200),
         autoPlayCurve: Curves.fastOutSlowIn,

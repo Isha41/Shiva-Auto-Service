@@ -2,6 +2,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/Widgets/Body/Home/Widgets/background.image.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -15,6 +16,7 @@ class _HomeState extends State<Home> {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     var smallScreen = ResponsiveWidget.isSmallScreen(context);
+    var mediumScreen = ResponsiveWidget.isMediumScreen(context);
     return SizedBox(
       height: screenHeight,
       width: screenWidth,
@@ -43,30 +45,27 @@ class _HomeState extends State<Home> {
               padding: EdgeInsets.only(
                   left: 15,
                   right: 15,
-                  bottom: ResponsiveWidget.isSmallScreen(context)
-                      ? 0.5
-                      : ResponsiveWidget.isMediumScreen(context)
+                  bottom: smallScreen
+                      ? 1
+                      : mediumScreen
                           ? 100
                           : 115),
               child: SizedBox(
                 width: smallScreen ? screenWidth : screenWidth / 2.67,
-                height: screenHeight / 3,
+                height: screenHeight / 2.8,
                 child: Column(
                   children: [
-                    const AutoSizeText(
-                      "Experience automotive excellence with 15 years of expertise: assured superior quality, professional service, and unmatched satisfaction on every drive.",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: "DancingScript",
-                        fontSize: 32,
-                      ),
-                    ),
+                   const SizedBox(height: 30),
                     SizedBox(
-                      height: smallScreen ? screenHeight / 50 : 0,
-                    ),
-                    Address(
-                      x: 0.0001,
-                      y: 2.0,
+                      height: mediumScreen ? screenHeight / 4 : null,
+                      child:const AutoSizeText(
+                        "Experience automotive excellence with 15 years of expertise: assured superior quality, professional service, and unmatched satisfaction on every drive.",
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: "DancingScript",
+                          fontSize: 32,
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -79,7 +78,7 @@ class _HomeState extends State<Home> {
               alignment: Alignment.bottomRight,
               child: SizedBox(
                 width: screenWidth,
-                height: screenHeight ,
+                height: screenHeight,
                 child: Image.asset(
                   "assets/car6.png",
                 ),

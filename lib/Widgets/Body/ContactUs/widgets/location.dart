@@ -5,9 +5,7 @@ import 'package:shiva_auto_service/constants/style.dart';
 
 class Address extends StatefulWidget {
   const Address({super.key, required this.x, required this.y});
-
   final double x;
-
   final double y;
 
   @override
@@ -25,14 +23,15 @@ class _AddressState extends State<Address> {
       fontSize: screenWidth * widget.x,
     );
     return Padding(
-      padding: EdgeInsets.all(widget.y),
+      padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Container(
-        color: Colors.white24,
         width: ResponsiveWidget.isSmallScreen(context)
             ? screenWidth
             : screenWidth / 2.3,
+        decoration: BoxDecoration(
+            color: Colors.white24, borderRadius: BorderRadius.circular(15)),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(1.0),
           child: Column(
             children: [
               AutoSizeText(
@@ -44,7 +43,7 @@ class _AddressState extends State<Address> {
                 style: style,
               ),
               AutoSizeText(
-                "Bagmati corridor,ktm.",
+                "Bagmati Corridor,Kathmandu",
                 style: style,
               )
             ],

@@ -42,6 +42,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    var smallScreen = ResponsiveWidget.isSmallScreen(context);
+    var mediumScreen = ResponsiveWidget.isMediumScreen(context);
+    var LargeScreen = ResponsiveWidget.isLargeScreen(context);
+    var screenWidth = MediaQuery.of(context).size.width;
+    var screenheight = MediaQuery.of(context).size.height;
+
+
+
     return Scaffold(
       key: scaffoldkey,
       appBar: ResponsiveWidget.isSmallScreen(context)
@@ -49,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           : null,
       drawer: const OpenDrawer(),
       backgroundColor: const Color(0xffBFBFCF),
-      body: ResponsiveWidget.isSmallScreen(context)
+      body: smallScreen
           ? SizedBox(
               child: IndexedStack(
                 index: pages.indexOf(widget.page),
@@ -70,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width / 2,
+                        width: mediumScreen? null:screenWidth/2,
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
@@ -83,10 +91,14 @@ class _HomePageState extends State<HomePage> {
                         ),
                         child: Row(
                           children: [
+                            LargeScreen?
                             Image.asset(
                               "assets/Logo1.png",
                               fit: BoxFit.contain,
-                            ),
+                            ): Image.asset(
+                              "assets/Logo.png",
+                              fit: BoxFit.contain,
+                            )
                           ],
                         ),
                       ),

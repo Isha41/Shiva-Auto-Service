@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:shiva_auto_service/Helpers/responsive.helper.dart';
 import 'package:shiva_auto_service/constants/style.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
+    bool smallScreen = ResponsiveWidget.isSmallScreen(context);
 
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushNamed(context, '/home');
@@ -25,10 +27,13 @@ class _SplashScreenState extends State<SplashScreen> {
           SizedBox(
             height: screenHeight,
             width: screenWidth,
-            child: Image.asset(
+            child: smallScreen? Image.asset(
+              "assets/splash1.png",
+              fit: BoxFit.fill,
+            ):Image.asset(
               "assets/splash.png",
               fit: BoxFit.fill,
-            ),
+            )
           ),
           Align(
             alignment: Alignment.topCenter,
