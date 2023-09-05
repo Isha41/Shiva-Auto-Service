@@ -19,10 +19,17 @@ class ContactUsDesktop extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Column(
+          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             DescriptionText(
                 screenHeight: screenHeight, screenWidth: screenWidth),
-            Address(),
+            SizedBox(
+              height: screenHeight / 12,
+            ),
+            Address(
+              x: 0.018,
+              y: 30.0,
+            ),
           ],
         ),
         SizedBox(width: screenWidth * 0.12),
@@ -48,7 +55,7 @@ class ContactUsDesktop extends StatelessWidget {
               screenWidth: screenWidth,
               name: "Mr.Bishnu Raya",
               phone: "+977 9841274678",
-              mail: "abc@gmail.com",
+              mail: "...",
               photo: "assets/bishnu.jpg",
             ),
           ],

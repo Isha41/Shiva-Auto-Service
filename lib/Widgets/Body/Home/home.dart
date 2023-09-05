@@ -41,22 +41,34 @@ class _HomeState extends State<Home> {
             alignment: Alignment.bottomLeft,
             child: Padding(
               padding: EdgeInsets.only(
-                  left: 16,
+                  left: 15,
+                  right: 15,
                   bottom: ResponsiveWidget.isSmallScreen(context)
-                      ? 0
+                      ? 0.5
                       : ResponsiveWidget.isMediumScreen(context)
                           ? 100
-                          : 60),
+                          : 115),
               child: SizedBox(
-                width: smallScreen ? screenWidth : screenWidth / 3,
+                width: smallScreen ? screenWidth : screenWidth / 2.67,
                 height: screenHeight / 3,
-                child: const AutoSizeText(
-                  "Experience automotive excellence with 15 years of expertise: assured superior quality, professional service, and unmatched satisfaction on every drive.",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "DancingScript",
-                    fontSize: 32,
-                  ),
+                child: Column(
+                  children: [
+                    const AutoSizeText(
+                      "Experience automotive excellence with 15 years of expertise: assured superior quality, professional service, and unmatched satisfaction on every drive.",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "DancingScript",
+                        fontSize: 32,
+                      ),
+                    ),
+                    SizedBox(
+                      height: smallScreen ? screenHeight / 50 : 0,
+                    ),
+                    Address(
+                      x: 0.0001,
+                      y: 2.0,
+                    ),
+                  ],
                 ),
               ),
             ),
